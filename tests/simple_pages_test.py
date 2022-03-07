@@ -20,7 +20,7 @@ def test_request_about(client):
     """This makes the index page"""
     response = client.get("/about")
     assert response.status_code == 200
-    assert b"About Page" in response.data
+    assert b"td44@njit.edu" in response.data
 
 def test_request_page1(client):
     """This makes the index page"""
