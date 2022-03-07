@@ -1,4 +1,89 @@
 {% extends "base.html" %}
 {% block content %}
-    Index Page
+    <div style="width:53%;margin: auto;">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="/git" target="_blank">
+                        <img src={{url_for('static', filename='images/Githubci.png')}} class="d-block w-100" alt="1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/docker" target="_blank">
+                        <img src="../static/images/dockerci.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/pythonflask" target="_blank">
+                        <img src="../static/images/Pythonflask.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/contitg" target="_blank">
+                        <img src="../static/images/Contintgci.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="row m-3" style="background-color: black" ;>
+        <div class="col-sm-3" style="padding:0;">
+            <div class="card m-2 h-75" style="width: 18rem;overflow-y:scroll">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: medium"> What is Github?</h5>
+                    <h6 class="card-subtitle mb-1 text-muted"></h6>
+                    <p class="card-text" style="font-size: smaller">GitHub is a web-based interface that uses Git, the
+                        open source version control software that lets multiple people make separate changes to web
+                        pages at the same time. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding:0;">
+            <div class="card m-2 h-75" style="width: 18rem;overflow-y:scroll">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: medium"> What is Docker?</h5>
+                    <h6 class="card-subtitle mb-1 text-muted"></h6>
+                    <p class="card-text" style="font-size: smaller">
+                        Docker is an application build and deployment tool. It is based on the idea of that you can
+                        package your code with dependencies into a deployable unit called a container. Containers have
+                        been around for quite some time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding:0;">
+            <div class="card m-2 h-75" style="width: 18rem;overflow-y:scroll ">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: medium">What is Python Flask?</h5>
+                    <h6 class="card-subtitle mb-1 text-muted"></h6>
+                    <p class="card-text" style="font-size: smaller">Flask is a web framework, it's a Python module that
+                        lets you develop web applications easily. It's has a small and easy-to-extend core: it's a
+                        microframework that doesn't include an ORM (Object Relational Manager) or such features. It does
+                        have many cool features like url routing, template engine. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding:0;">
+            <div class="card m-2 h-75" style="width: 18rem;overflow-y:scroll">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: medium">What is continuous integration and deployment?</h5>
+                    <h6 class="card-subtitle mb-1 text-muted"></h6>
+                    <p class="card-text" style="font-size: smaller">CI/CD is a method to frequently deliver apps to
+                        customers by introducing automation into the stages of app development. The main concepts
+                        attributed to CI/CD are continuous integration, continuous delivery, and continuous
+                        deployment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 {% endblock %}
