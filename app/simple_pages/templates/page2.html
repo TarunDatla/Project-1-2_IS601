@@ -17,7 +17,7 @@
                 software from its environment and ensure that it works uniformly despite differences for instance
                 between development and staging<br><br>
             </p>
-            <p>
+            <p class="col-8">
                 <span style="color:black;font-weight:bold;size:B5">Docker images - </span> The default docker images
                 will show all top level images, their repository and tags, and their size.
                 Docker images have intermediate layers that increase reusability, decrease disk usage, and speed up
@@ -27,36 +27,36 @@
                 An image will be listed more than once if it has multiple repository names or tags. This single image
                 (identifiable by its matching IMAGE ID) uses up the SIZE listed only once.<br><br>
             </p>
-            <p>
+            <p class="col-8">
                 <span style="color:black;font-weight:bold;size:B5">Docker Commands you must know !! - </span><br>
-                1.	docker pull <imagename> - This command is used to pull the images from the docker repository .<br>
+                1.	docker pull < imagename > - This command is used to pull the images from the docker repository .<br>
 
-                2.	docker run -it -d <imagename> - This command is used to create acontainer from an image<br>
+                2.	docker run -it -d < imagename > - This command is used to create acontainer from an image<br>
 
                 3.	docker ps – This command is used to show up the list of running commands.<br>
 
-                4.	docker exec -it <containerid> bash – This command is used top access the running container<br>
+                4.	docker exec -it < containerid > bash – This command is used top access the running container<br>
 
-                5.	docker stop <containerid> This command is used to stop a running container.<br>
+                5.	docker stop < containerid > This command is used to stop a running container.<br>
 
-                6.	docker kill <containerid> - This command stops the execution of the current executing container. The difference between the docker stop and docker kill command is docker stop gives the container time to shutdown, when a container is taking too much time to stop then you can choose kill.<br>
+                6.	docker kill < containerid > - This command stops the execution of the current executing container. The difference between the docker stop and docker kill command is docker stop gives the container time to shutdown, when a container is taking too much time to stop then you can choose kill.<br>
 
-                7.	docker commit <containerid><username/imagename> - This command creates a new image of an edited container on the local system.<br>
+                7.	docker commit < containerid >< username/imagename> - This command creates a new image of an edited container on the local system.<br>
 
-                8.	docker push <username/imagename> - This command is used to push an image to docker hub repository.<br>
+                8.	docker push < username/imagename > - This command is used to push an image to docker hub repository.<br>
 
                 9.	docker login – This command is used to login into your docker hub repository<br>
 
-                10.	docker push <username/imagename> - This command is used to push an image to the docker hub repository<br>
+                10.	docker push < username/imagename > - This command is used to push an image to the docker hub repository<br>
 
                 11.	docker images – It is used to list all the images (docker images) stored<br>
 
-                12.	docker rm <containerid> - This command is used to delete a stopped container.<br>
+                12.	docker rm < containerid > - This command is used to delete a stopped container.<br>
 
                 13.	docker build prune – This command is used for clearing the cache<br><br>
 
             </p>
-            <p>
+            <p class="col-8">
             <span style="color:black;font-weight:bold;size:B5"> How to start the project and how to access the container with the terminal using just terminal commands ? </span><br>
                 Firstly make a repository on docker.com and then run the Docker run -itp 80:80 in your terminal. After
                 running the previous command run apt-get update. Run apt-get install vim apache2 w3m. Set the server
