@@ -14,13 +14,13 @@ def test_request_index(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b"GitHub is a web-based interface that uses Git" in response.data
+    assert b"Docker is an application build and deployment tool." in response.data
 
 def test_request_about(client):
     """This makes the index page"""
     response = client.get("/about")
     assert response.status_code == 200
-    assert b"td44@njit.edu" in response.data
+    assert b"D. Tarun Sai Pavan" in response.data
 
 def test_request_page1(client):
     """This makes the index page"""
@@ -44,7 +44,7 @@ def test_request_page4(client):
     """This makes the index page"""
     response = client.get("/page4")
     assert response.status_code == 200
-    assert b"Page 4" in response.data
+    assert b" modern application development," in response.data
 
 def test_request_page_not_found(client):
     """This makes the index page"""

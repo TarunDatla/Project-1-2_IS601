@@ -1,4 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 4
+    </div>
+    <h1> Continuous Integration and Deployment ( CI/CD ) </h1><br>
+    <div class="row">
+
+        <div>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5"> What is continuous Integration ?</span><br>In
+                modern application development, the goal is to have multiple developers working simultaneously on
+                different features of the same app. However, if an organization is set up to merge all branching source
+                code together on one day (known as “merge day”), the resulting work can be tedious, manual, and
+                time-intensive. That’s because when a developer working in isolation makes a change to an application,
+                there’s a chance it will conflict with different changes being simultaneously made by other developers.
+                This problem can be further compounded if each developer has customized their own local integrated
+                development environment (IDE), rather than the team agreeing on one cloud-based IDE.
+
+                Continuous integration (CI) helps developers merge their code changes back to a shared branch, or
+                “trunk,” more frequently—sometimes even daily. Once a developer’s changes to an application are merged,
+                those changes are validated by automatically building the application and running different levels of
+                automated testing, typically unit and integration tests, to ensure the changes haven’t broken the app.
+                This means testing everything from classes and function to the different modules that comprise the
+                entire app. If automated testing discovers a conflict between new and existing code, CI makes it easier
+                to fix those bugs quickly and<br><br>
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5"> What is continuous Deployment ?</span><br>
+                The final stage of a mature CI/CD pipeline is continuous deployment. As an extension of continuous
+                delivery, which automates the release of a production-ready build to a code repository, continuous
+                deployment automates releasing an app to production. Because there is no manual gate at the stage of the
+                pipeline before production, continuous deployment relies heavily on well-designed test automation.
+
+                In practice, continuous deployment means that a developer’s change to a cloud application could go live
+                within minutes of writing it (assuming it passes automated testing). This makes it much easier to
+                continuously receive and incorporate user feedback. Taken together, all of these connected CI/CD
+                practices make deployment of an application less risky, whereby it’s easier to release changes to apps
+                in small pieces, rather than all at once. There’s also a lot of upfront investment, though, since
+                automated tests will need to be written to accommodate a variety of testing and release stages in the
+                CI/CD pipeline.<br><br>
+            </p>
+            <p class="col-8">
+              <span style="color:black;font-weight:bold;size:B5"> How you have the project setup to use GitHub Actions ?</span><br>
+                With world-class CI/CD, GitHub Actions makes it simple to automate all your development activities.
+                Right from GitHub, you can build, test, and deploy your code. Make code reviews, branch management, and
+                issue triaging go as smoothly as possible.
+                I've added repositories secrets to the github actions to assist me connect with Heroku and Docker when
+                my code is updated and committed with any new modifications. In the secrets I have added
+                DOCKER_USERNAME, DOCKER_PASSWORD, HEROKU_API_KEY.<br><br>
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5"> How you can review code using a development server before merging pull requests ?</span><br>
+                We have two different workflow files dev.yml and prod.yml are two separate workflow files. When a pull
+                request is made, the development workflow deploys the app to the development server. This aids in
+                maintaining the production server bug-free and up and operating at all times. When someone adds a new
+                feature to a branch and submits a pull request, we can look at the changes they made and see if they
+                break the code by testing it on the development server and evaluating the test cases' integrity. If the
+                code is bug-free and clean, we can merge the pull request into the master plan, which will deploy the
+                app to the development server.<br><br>
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5"> How you can deploy master to a production server ?</span><br>
+                The information in the prod.yml workflow file assists us in deploying master to the production server.
+                The app will be deployed on the production server whenever code is committed and pushed to the master
+                branch, or a merge pull request is made. It will execute all of the test cases before deploying to the
+                production server, and only if all of the test cases pass will it be deployed to Heroku's production app
+                and Docker Hub.<br><br>
+            </p>
+            <p class="col-8">
+              <span style="color:black;font-weight:bold;size:B5"> Explain how you deploy an image of your project to Dockerhub when master is updated ?</span><br>
+                The workflow file prod.yml contains information to help you deploy the master to your Docker container.
+                Each time the master is updated, the workflow runs pytests, sets up the Python environment, installs the
+                dependencies, and installs the required packages listed in the requirements.txt file. Then log in to
+                your DockerHub account using the DOCKER_USERNAME and DOCKER_PASSWORD listed in your Github action secret
+                and deploy the latest image under the image tag in your Docker repository.<br><br>
+            </p>
+
+        </div>
+    </div>
 {% endblock %}
