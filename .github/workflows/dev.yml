@@ -28,6 +28,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "project1-production" #Must be unique in Heroku
+          heroku_app_name: "project1-develop"
           heroku_email: "tarundatla2959@gmail.com"
           usedocker: true
