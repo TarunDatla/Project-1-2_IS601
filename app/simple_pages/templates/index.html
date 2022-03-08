@@ -4,7 +4,7 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="/git" target="_blank">
+                    <a href="{{ url_for('simple_pages.show', page="page1")}}" target="_blank">
                         <img src={{url_for('static', filename='images/Githubci.png')}} class="d-block w-100" alt="1">
                     </a>
                 </div>
