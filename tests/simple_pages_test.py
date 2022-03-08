@@ -26,13 +26,13 @@ def test_request_page1(client):
     """This makes the index page"""
     response = client.get("/page1")
     assert response.status_code == 200
-    assert b"Page 1" in response.data
+    assert b"Git Merge" in response.data
 
 def test_request_page2(client):
     """This makes the index page"""
     response = client.get("/page2")
     assert response.status_code == 200
-    assert b"Page 2" in response.data
+    assert b"A container is a standard" in response.data
 
 def test_request_page3(client):
     """This makes the index page"""

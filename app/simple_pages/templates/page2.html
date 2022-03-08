@@ -1,4 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 2
+    </div>
+    <div class="row">
+
+        <div>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5">Docker Container - </span> A container is a standard
+                unit of software that packages up code and all its dependencies, so the application runs quickly and
+                reliably from one computing environment to another. A Docker container image is a lightweight,
+                standalone, executable package of software that includes everything needed to run an application: code,
+                runtime, system tools, system libraries and settings.
+                Container images become containers at runtime and in the case of Docker containers - images become
+                containers when they run on Docker Engine. Available for both Linux and Windows-based applications,
+                containerized software will always run the same, regardless of the infrastructure. Containers isolate
+                software from its environment and ensure that it works uniformly despite differences for instance
+                between development and staging
+            </p>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5">Docker images - </span> The default docker images
+                will show all top level images, their repository and tags, and their size.
+                Docker images have intermediate layers that increase reusability, decrease disk usage, and speed up
+                docker build by allowing each step to be cached. These intermediate layers are not shown by default.
+                The SIZE is the cumulative space taken up by the image and all its parent images. This is also the disk
+                space used by the contents of the Tar file created when you docker save an image.
+                An image will be listed more than once if it has multiple repository names or tags. This single image
+                (identifiable by its matching IMAGE ID) uses up the SIZE listed only once.
+            </p>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5">Docker Commands you must know !! - </span><br>
+                1.	docker pull <imagename> - This command is used to pull the images from the docker repository .<br>
+
+                2.	docker run -it -d <imagename> - This command is used to create acontainer from an image<br>
+
+                3.	docker ps – This command is used to show up the list of running commands.<br>
+
+                4.	docker exec -it <containerid> bash – This command is used top access the running container<br>
+
+                5.	docker stop <containerid> This command is used to stop a running container.<br>
+
+                6.	docker kill <containerid> - This command stops the execution of the current executing container. The difference between the docker stop and docker kill command is docker stop gives the container time to shutdown, when a container is taking too much time to stop then you can choose kill.<br>
+
+                7.	docker commit <containerid><username/imagename> - This command creates a new image of an edited container on the local system.<br>
+
+                8.	docker push <username/imagename> - This command is used to push an image to docker hub repository.<br>
+
+                9.	docker login – This command is used to login into your docker hub repository<br>
+
+                10.	docker push <username/imagename> - This command is used to push an image to the docker hub repository<br>
+
+                11.	docker images – It is used to list all the images (docker images) stored<br>
+
+                12.	docker rm <containerid> - This command is used to delete a stopped container.<br>
+
+                13.	docker build prune – This command is used for clearing the cache<br>
+
+            </p>
+            <p>
+
+
+            </p>
+            <p>
+
+
+            </p>
+        </div>
+    </div>
 {% endblock %}
