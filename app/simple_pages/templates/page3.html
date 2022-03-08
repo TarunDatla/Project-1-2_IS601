@@ -1,4 +1,77 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 3
+    </div>
+    <h1> Python and Flask </h1><br>
+    <div class="row">
+
+        <div>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5"> A glance about Pytest </span><br> PyTest is a
+                testing framework that lets users build test scripts in Python. It aids in the creation of easy and
+                scalable test cases for databases, APIs, and user interfaces. PyTest is mostly used for writing API
+                tests. It
+                aids with the development of tests ranging from simple unit tests to large functional tests.<br><br>
+            </p>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5"> All you need to know about Workflow Structures </span><br>
+                Why do we need workflow?<br>
+                The workflow configuration file is used to create and manage the Continuous Integration and deployment
+                between the Github, local and Heroku.<br>
+                We have 2 Workflow Files as follows - <br>
+                >Project root folder>workflows >dev.yml (Development workflow)<br>
+                >Project root folder>workflows>prod.yml (Production workflow)<br><br>
+            </p>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5">What do we have in simple pages?  - </span><br>
+
+                In the simple pages folder, it consists all the html files required for the project. We have 6 files in the simple pages they areas follows – <br>
+                1.	index.html – It is a file which represents the home page.<br>
+                2.	page1.html – It consists of all the information you need to know about Github.<br>
+                3.	page2.html – This page contains all the essential information you need to know about the Docker.<br>
+                4.	page3.html – It contains all the info about Python and flask.<br>
+                5.	page4.html – All you need to know about CI/CD.<br>
+                6.	about.html – All the details of the respective person.<br><br>
+
+            </p>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5"> What do you have in the context_processors ? </span><br>
+
+                We have -_init_.py .The -_init_.py is used to mark directories as python package directories.<br><br>
+            </p>
+            <p>
+               <span style="color:black;font-weight:bold;size:B5"> All the Information about the directories ( static )  </span><br>
+                1.	css -  the css file consists of all the css files required to style the webpage<br>
+                2.	images – the images folder consists of all the images which is to be displayed in the website<br>
+                3.	js – It contains all the javascript files used for functionality<br><br>
+            </p>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5"> What are templates and what does it contain?  </span><br>
+                The templates consist of the base.html file in which it stores all the header and footer information. It can be reused in other files.<br><br>
+            </p>
+            <P>
+               <span style="color:black;font-weight:bold;size:B5"> You'll find everything you need to know about the remaining files here ! </span><br>
+
+                -run.py- This module is used to locate and run python modules without importing them first.<br>
+                -tests – All the test cases required to test various webpages are stored in this folder<br>
+                -.coveragerc – This makes it easier to re-run coverage.py with consistent setting.<br>
+                -.dockerignore – It is used to ignore files and folder when you try to build a docker Image.<br>
+                -.gitignore – Tells Git which files to ignore when committing your project to the Github repo.<br>
+                -.pylintrc – Pylint is a tool that checks for errors in Python code, tries to enforce a coding standard
+                and looks for code.<br>
+                -docker-compose.yml -Orchestration file that contains the configuration to develop locally, It overrides
+                the dockerfile to run the flask development server instead of running the gunicorn server that is used
+                for hosting on Heroku<br>
+                -dockerfile – File is used to create an image to run in a container that runs the program<br>
+                -heroku.yml- It is a manifest you can use to define your Heroku app. It allows you to build docker
+                images on heroku and specify addon and config vars to create app<br>
+                -readme.md - It is used to provide orientation and guide on how to use your code for engineers browsing
+                code, especially first-time users.<br>
+                -requirements.txt - It is used for specifying what python packages are required to run the project you
+                are looking at<br>
+                -setup.py - This allows you to easily install Python packages.<br>
+
+            </P>
+        </div>
+    </div>
 {% endblock %}
+
