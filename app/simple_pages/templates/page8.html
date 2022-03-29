@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+    </div>
+    <h1> SOLID </h1><br>
+    <div class="row">
+
+        <div>
+            <p>
+                <span style="color:black;font-weight:bold;size:B5">What is S O L I D ? - </span> SOLID is an acronym for
+                the first five object-oriented design (OOD) principles by Robert C. Martin (also known as Uncle Bob).
+                Note: While these principles can apply to various programming languages, the sample code contained in
+                this article will use PHP. These principles establish practices that lend to developing software with
+                considerations for maintaining and extending as the project grows. Adopting these practices can also
+                contribute to avoiding code smells, refactoring code, and Agile or Adaptive software development. SOLID
+                stands for:
+                S - Single-responsibility Principle
+                O - Open-closed Principle
+                L - Liskov Substitution Principle
+                I - Interface Segregation Principle
+                D - Dependency Inversion Principle
+                you will be introduced to each principle individually to understand how SOLID can help make you a better
+                developer.<br><br>
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5">Single Resposbility Principle - </span>
+                Single-responsibility Principle (SRP) states: A class should have one and only one reason to change,
+                meaning that a class should have only one job.<br>
+                here in this figure addition class is only used to perform addition function.<br><br>
+
+
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5">Open Closed principle - </span> Open-closed Principle
+                (OCP) states: Objects or entities should be open for extension but closed for modification. This means
+                that a class should be extendable without modifying the class itself.<br>
+                here in the image variables are declared in constructor. they are declared for using in addition,
+                subtraction, multiplication, division. but they can also be used for exponents and other
+                calculations.<br><br>
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5"> Liskov Substitution Principle - </span> Interface
+                segregation principle states: A client should never be forced to implement an interface that it doesn’t
+                use, or clients shouldn’t be forced to depend on methods they do not use.
+                <br><br>
+            </p>
+            <p class="col-8">
+                <span style="color:black;font-weight:bold;size:B5">Dependency Inversion Principle - </span> Dependency
+                inversion principle states: Entities must depend on abstractions, not on concretions. It states that the
+                high-level module must not depend on the low-level module, but they should depend on abstractions. This
+                principle allows for decoupling.<br><br>
+            </p>
+        </div>
+    </div>
+{% endblock %}
