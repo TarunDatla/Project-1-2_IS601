@@ -1,5 +1,6 @@
 """This test the homepage"""
 
+
 def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
@@ -9,12 +10,18 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link" href="/page2">Page 2</a>' in response.data
     assert b'<a class="nav-link" href="/page3">Page 3</a>' in response.data
     assert b'<a class="nav-link" href="/page4">Page 4</a>' in response.data
+    assert b'<a class="nav-link" href="/page5">Page 5</a>' in response.data
+    assert b'<a class="nav-link" href="/page6">Page 6</a>' in response.data
+    assert b'<a class="nav-link" href="/page7">Page 7</a>' in response.data
+    assert b'<a class="nav-link" href="/page8">Page 8</a>' in response.data
+
 
 def test_request_index(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Docker is an application build and deployment tool." in response.data
+    assert b"carouselExampleControls" in response.data
+
 
 def test_request_about(client):
     """This makes the index page"""
@@ -22,11 +29,13 @@ def test_request_about(client):
     assert response.status_code == 200
     assert b"D. Tarun Sai Pavan" in response.data
 
+
 def test_request_page1(client):
     """This makes the index page"""
     response = client.get("/page1")
     assert response.status_code == 200
     assert b"Git Merge" in response.data
+
 
 def test_request_page2(client):
     """This makes the index page"""
@@ -34,11 +43,13 @@ def test_request_page2(client):
     assert response.status_code == 200
     assert b"A container is a standard" in response.data
 
+
 def test_request_page3(client):
     """This makes the index page"""
     response = client.get("/page3")
     assert response.status_code == 200
     assert b" testing framework" in response.data
+
 
 def test_request_page4(client):
     """This makes the index page"""
@@ -46,7 +57,36 @@ def test_request_page4(client):
     assert response.status_code == 200
     assert b" modern application development," in response.data
 
-def test_request_page_not_found(client):
+
+def test_request_page5(client):
     """This makes the index page"""
     response = client.get("/page5")
+    assert response.status_code == 200
+    assert b" Pylint and Basics " in response.data
+
+
+def test_request_page6(client):
+    """This makes the index page"""
+    response = client.get("/page6")
+    assert response.status_code == 200
+    assert b" AAA testing " in response.data
+
+
+def test_request_page7(client):
+    """This makes the index page"""
+    response = client.get("/page7")
+    assert response.status_code == 200
+    assert b" OOPS Concepts " in response.data
+
+
+def test_request_page8(client):
+    """This makes the index page"""
+    response = client.get("/page8")
+    assert response.status_code == 200
+    assert b" SOLID " in response.data
+
+
+def test_request_page_not_found(client):
+    """This makes the index page"""
+    response = client.get("/page9")
     assert response.status_code == 404
