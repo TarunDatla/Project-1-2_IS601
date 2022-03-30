@@ -2,45 +2,45 @@
 {% block content %}
     <div style="width:53%;margin: auto;">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" style="height:400px">
                 <div class="carousel-item active">
                     <a href="{{ url_for('simple_pages.show', page="page1") }}" target="_blank">
-                        <img src="../static/images/Githubci.png" class="d-block w-100" alt="1"/>
+                        <img src="../static/images/Githubci.png" class="d-block w-100 h-50" alt="1"/>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page2") }}" target="_blank">
-                        <img src="../static/images/dockerci.jpg" class="d-block w-100" alt="...">
+                        <img src="../static/images/dockerci.jpg" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page3") }}" target="_blank">
-                        <img src="../static/images/Pythonflask.jpg" class="d-block w-100" alt="...">
+                        <img src="../static/images/Pythonflask.jpg" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page4") }}" target="_blank">
-                        <img src="../static/images/Contintgci.jpg" class="d-block w-100" alt="...">
+                        <img src="../static/images/cicd carousel.png" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page5") }}" target="_blank">
-                        <img src="../static/images/pylint.png" class="d-block w-100" alt="...">
+                        <img src="../static/images/pylintcarousel.png" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page6") }}" target="_blank">
-                        <img src="../static/images/aaatesting.png" class="d-block w-100" alt="...">
+                        <img src="../static/images/aaatesting.png" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page7") }}" target="_blank">
-                        <img src="../static/images/oopsconcepts.png" class="d-block w-100" alt="...">
+                        <img src="../static/images/oopsconcepts.png" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="{{ url_for('simple_pages.show', page="page8") }}" target="_blank">
-                        <img src="../static/images/solid.jpeg" class="d-block w-100" alt="...">
+                        <img src="../static/images/solid.jpeg" class="d-block w-100 h-50" alt="...">
                     </a>
                 </div>
             </div>
@@ -57,5 +57,20 @@
         </div>
     </div>
 
+    </div>
+    <div>
+        <h1> ABOUT ME </h1>
+        <p>
+            Hey this is Tarun Sai Pavan Datla graduate student at New Jersey institute of technology in Computer
+            Science. Creating dynamic web pages is something I'm very paassionate about. I'm excited to put everything
+            I've learned in this course to use in real-world situations<br>
+        </p>
+    </div>
+    <div>
+    <h1> Github and Linkedin Links </h1>
+    <p>
+        <a href="https://github.com/TarunDatla"> Github </a><br>
+        <a href="https://www.linkedin.com/in/tarun-sai-pavan-datla-142258222"> LinkedIn </a>
+    </p>
     </div>
 {% endblock %}
